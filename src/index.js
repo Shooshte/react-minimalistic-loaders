@@ -8,13 +8,13 @@ import { shapes } from "./shapes";
 class Loader extends Component {
   render() {
     const {
-      size,
-      color,
-      fontSize,
-      loaderText,
-      length,
-      animation,
-      shape
+      size = "14px",
+      color = "#000",
+      fontSize = "28px",
+      loaderText = "Loading...",
+      length = "4s",
+      animation = "NormalRotation",
+      shape = "Base"
     } = this.props;
 
     const ShapeDiv = shapes[shape];
@@ -27,7 +27,7 @@ class Loader extends Component {
           color={color}
           length={length}
         />
-        <span className="loader-text">{loaderText}</span>
+        {loaderText !== "" && <span className="loader-text">{loaderText}</span>}
       </LoaderStyles>
     );
   }
