@@ -8,13 +8,13 @@ import { shapes } from "./shapes";
 class Loader extends Component {
   render() {
     const {
-      size = "14px",
-      color = "#000",
-      fontSize = "28px",
-      loaderText = "Loading...",
-      length = "4s",
-      animation = "NormalRotation",
-      shape = "Base"
+      size,
+      color,
+      fontSize,
+      loaderText,
+      length,
+      animation,
+      shape
     } = this.props;
 
     const ShapeDiv = shapes[shape];
@@ -32,6 +32,16 @@ class Loader extends Component {
     );
   }
 }
+
+Loader.defaultProps = {
+  size: "14px",
+  color: "#000",
+  fontSize: "28px",
+  loaderText: "Loading...",
+  length: "4s",
+  animation: "NormalRotation",
+  shape: "Base"
+};
 
 Loader.propTypes = {
   size: PropTypes.string, // Size in a valid CSS unit
@@ -51,7 +61,6 @@ const LoaderStyles = s.div`
   padding: ${props => props.fontSize};
   .loader-text {
     color: ${props => props.color};
-    margin-top: 1em;
   }
 `;
 

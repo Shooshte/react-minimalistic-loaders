@@ -19,8 +19,6 @@ class Demo extends Component {
       loaderText: "Loading...",
       length: "4s"
     };
-
-    this.handleChange = this.handleChange.bind(this);
   }
 
   updateState = (key, value) => {
