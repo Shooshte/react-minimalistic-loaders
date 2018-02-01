@@ -2,31 +2,19 @@ import React, { Component } from "react";
 import s from "styled-components";
 import PropTypes from "prop-types";
 
-import { jumpyRotation } from "./animations/jumpyRotation.js";
-import { normalRotation } from "./animations/normalRotation.js";
+import { animations } from "./animations";
+import { shapes } from "./shapes";
 
-import { BaseShape } from "./shapes/base";
-import { NotchedCircle } from "./shapes/notchedCircle";
-
-const animations = {
-  jumpyRotation: jumpyRotation,
-  normalRotation: normalRotation
-};
-
-const shapes = {
-  square: BaseShape,
-  notchedCircle: NotchedCircle
-};
 class Loader extends Component {
   render() {
     const {
-      size = "14px",
-      color = "#000",
-      fontSize = "28px",
-      loaderText = "Loading...",
-      length = "4s",
-      animation = "jumpyRotation",
-      shape = "notchedCircle"
+      size,
+      color,
+      fontSize,
+      loaderText,
+      length,
+      animation,
+      shape
     } = this.props;
 
     const ShapeDiv = shapes[shape];

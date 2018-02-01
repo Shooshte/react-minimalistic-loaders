@@ -1,6 +1,6 @@
 import s from "styled-components";
 
-export const BaseShape = s.div`
+export const Base = s.div`
   margin: ${props => props.size};
   height: ${props => props.size};
   width: ${props => props.size};

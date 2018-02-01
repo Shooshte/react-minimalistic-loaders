@@ -1,6 +1,6 @@
 import { keyframes } from "styled-components";
 
-export const jumpyRotation = keyframes`
+export const JumpyRotation = keyframes`
   0% {
     transform: rotate(0deg) scale(0, 0);
   }
