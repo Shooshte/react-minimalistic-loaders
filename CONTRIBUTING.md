@@ -23,13 +23,13 @@ export const My Shape = Base.extend`
     ...new styles here
 `;
 ```
-1. After you add the styles, add your shape into `/src/shapes/index.js`
+4. After you add the styles, add your shape into `/src/shapes/index.js`
 
 ## Adding animations
 
 1. Add a animation folder into `/src/animations`. Use the existing naming convention (`NormalRotation`).
 1. Add a `index.js` file inside the folder
-1. Create a animation using the styled-components keyframes. For instance:
+1. Create a animation using the styled-components keyframes. For instance: 
 ```javascript
 import { keyframes } from "styled-components";
 
@@ -42,4 +42,4 @@ export const NormalRotation = keyframes`
   }
 `;
 ```
-1. After you add the styles, add your animation into `/src/animations/index.js`
+4. After you add the styles, add your animation into `/src/animations/index.js`

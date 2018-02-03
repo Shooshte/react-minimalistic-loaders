@@ -2,7 +2,7 @@
 
 [![npm package][npm-badge]][npm]
 
-##A lightweight react loader component. I will try to add new animations and shapes consistently.
+## A lightweight react loader component. I will try to add new animations and shapes consistently.
 
 ### Usage:
 
@@ -49,3 +49,7 @@ export default App;
 
 [npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
 [npm]: https://www.npmjs.org/package/npm-package
+
+### Contributing:
+
+Please read CONTRIBUTING.md before commiting. PRs that do not follow the existing code structure will be rejected.
