@@ -10,7 +10,7 @@
 `npm i react-minimalistic-loaders` or
 `yarn add react-minimalistic-loaders`
 
-#### use it in your component
+#### use it in your component:
 ```javascript
 import React, { Component } from "react";
 import Loader from "react-minimalistic-loaders";
