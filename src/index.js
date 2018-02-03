@@ -34,7 +34,7 @@ class Loader extends Component {
 }
 
 Loader.defaultProps = {
-  size: "14px",
+  size: "28px",
   color: "#000",
   fontSize: "28px",
   loaderText: "Loading...",

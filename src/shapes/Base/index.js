@@ -4,7 +4,8 @@ export const Base = s.div`
   margin: ${props => props.size};
   height: ${props => props.size};
   width: ${props => props.size};
-  background-color: ${props => props.color};
+  background-color: transparent;
   animation: ${props => props.animation} ${props =>
   props.length} linear infinite;
+  border: calc(${props => props.size} * 0.1) solid ${props => props.color};
 `;

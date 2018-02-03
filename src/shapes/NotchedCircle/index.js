@@ -2,10 +2,8 @@ import { extend } from "styled-components";
 import { Base } from "../Base/";
 
 export const NotchedCircle = Base.extend`
-  border: calc(${props => props.size} * 0.1) solid ${props => props.color};
   border-radius: 50%;
   border-right-color: transparent;
-  background-color: transparent;
   :before {
     content: "";
     display: block;
@@ -16,6 +14,6 @@ export const NotchedCircle = Base.extend`
     border-right-color: transparent;
     border-radius: 50%;
     margin: calc(-${props => props.size} * 0.1);
-    transform: rotate(75deg);
+    transform: rotate(65deg);
   }
 `;
