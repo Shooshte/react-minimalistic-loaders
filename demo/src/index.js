@@ -13,7 +13,7 @@ class Demo extends Component {
     this.state = {
       animation: "JumpyRotation",
       shape: "Base",
-      size: "14px",
+      size: "28px",
       color: "#000",
       fontSize: "28px",
       loaderText: "Loading...",
