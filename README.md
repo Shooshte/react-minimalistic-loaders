@@ -7,7 +7,8 @@
 ### Usage:
 
 #### installation:
-`npm i react-minimalistic-loaders` or
+`npm i react-minimalistic-loaders` 
+or
 `yarn add react-minimalistic-loaders`
 
 #### use it in your component:
@@ -50,7 +51,7 @@ export default App;
 * `Sunshine`
 
 [npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
-[npm]: https://www.npmjs.org/package/npm-package
+[npm]: https://www.npmjs.com/package/react-minimalistic-loaders
 
 ### Contributing:
 
