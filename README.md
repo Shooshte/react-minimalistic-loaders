@@ -7,9 +7,9 @@
 ### Usage:
 
 ```javascript
-import {ReactMinimalisticLoader} from 'react-minimalistic-loader'
+import Loader from 'react-minimalistic-loader'
 
-<ReactMinimalisticLoader animation='NormalRotation' shape='sunshine'/>
+<Loader animation='NormalRotation' shape='Sunshine'/>
 ```
 
 ### Props:
