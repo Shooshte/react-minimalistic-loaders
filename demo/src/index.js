@@ -12,7 +12,7 @@ class Demo extends Component {
 
     this.state = {
       animation: "JumpyRotation",
-      shape: "Base",
+      shape: "Square",
       size: "28px",
       color: "#000",
       fontSize: "28px",
@@ -45,6 +45,7 @@ class Demo extends Component {
     return (
       <DemoStyles>
         <Loader
+          animation={animation} shape={shape}
         />
         <div className="controls-row">
           <div className="controls-container">
