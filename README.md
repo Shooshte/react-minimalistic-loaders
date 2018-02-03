@@ -1,7 +1,6 @@
 # React-minimalistic-loaders
 
 [![npm package][npm-badge]][npm]
-[![Coveralls][coveralls-badge]][coveralls]
 
 A lightweight react loader component. I will try to add new animations and shapes consistently.
 
