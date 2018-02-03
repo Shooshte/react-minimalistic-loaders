@@ -19,9 +19,7 @@ import Loader from "react-minimalistic-loaders";
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Loader shape="Sunshine" size="100px" />
-      </div>
+      <Loader shape="Sunshine" size="100px" />
     );
   }
 }
