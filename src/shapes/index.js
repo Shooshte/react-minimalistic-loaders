@@ -1,4 +1,4 @@
-import { Square } from "./Base/";
+import { Square } from "./Square/";
 import { NotchedCircle } from
   "./NotchedCircle/";
 import { Ball } from './Ball/'
