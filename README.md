@@ -52,9 +52,7 @@ export default App;
 
 ### Contributing:
 
-Please read [contribute](CONTRIBUTING.md) before commiting. PRs that do not follow the existing code structure will be rejected.
+Please read [CONTRIBUTING.MD](CONTRIBUTING.md) before commiting. PRs that do not follow the existing code structure will be rejected.
 
 [npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
 [npm]: https://www.npmjs.com/package/react-minimalistic-loaders
-
-[contribute]: https://github.com/Shooshte/react-minimalistic-loaders/blob/master/CONTRIBUTING.md
