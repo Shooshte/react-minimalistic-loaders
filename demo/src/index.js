@@ -45,7 +45,7 @@ class Demo extends Component {
     return (
       <DemoStyles>
         <Loader
-          animation={animation} shape={shape}
+          animation={animation} shape={shape} size={size} color={color} fontSize={fontSize} loaderText={loaderText} length={length}
         />
         <div className="controls-row">
           <div className="controls-container">
