@@ -2,14 +2,28 @@
 
 [![npm package][npm-badge]][npm]
 
-##### A lightweight react loader component. I will try to add new animations and shapes consistently.
+##A lightweight react loader component. I will try to add new animations and shapes consistently.
 
 ### Usage:
 
-```javascript
-import Loader from 'react-minimalistic-loader'
+`npm i react-minimalistic-loaders`
+`yarn add react-minimalistic-loaders`
 
-<Loader animation='NormalRotation' shape='Sunshine'/>
+```javascript
+import React, { Component } from "react";
+import Loader from "react-minimalistic-loaders";
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Loader shape="Sunshine" size="100px" />
+      </div>
+    );
+  }
+}
+
+export default App;
 ```
 
 ### Props:

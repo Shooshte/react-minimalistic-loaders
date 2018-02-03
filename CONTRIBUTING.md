@@ -10,16 +10,36 @@
 
 - `npm start` will run a development server with the component's demo app at [http://localhost:3000](http://localhost:3000) with hot module reloading.
 
-## Running Tests
+## Adding shapes
 
-- `npm test` will run the tests once.
+1. Add a shape folder into `/src/shapes`. Use the existing naming convention (`Base`).
+1. Add a `index.js` file inside the folder
+1. Import the Base shape from the `Base` folder. This is a square div, ensuring all the props from the React component get passed correctly. The shapes should consist of a single `div`, and only use a single color that can be accesed by using `${props => props.color}` For instance:
+```javascript
+import { extend } from "styled-components";
+import { Base } from "../Base/";
 
-- `npm run test:coverage` will run the tests and produce a coverage report in `coverage/`.
+export const My Shape = Base.extend`
+    ...new styles here
+`;
+```
+1. After you add the styles, add your shape into `/src/shapes/index.js`
 
-- `npm run test:watch` will run the tests on every change.
+## Adding animations
 
-## Building
+1. Add a animation folder into `/src/animations`. Use the existing naming convention (`NormalRotation`).
+1. Add a `index.js` file inside the folder
+1. Create a animation using the styled-components keyframes. For instance:
+```javascript
+import { keyframes } from "styled-components";
 
-- `npm run build` will build the component for publishing to npm and also bundle the demo app.
-
-- `npm run clean` will delete built resources.
+export const NormalRotation = keyframes`
+  0% {
+    transform: opacity(0);
+  }
+  100% {
+    transform: opacity(100);
+  }
+`;
+```
+1. After you add the styles, add your animation into `/src/animations/index.js`
