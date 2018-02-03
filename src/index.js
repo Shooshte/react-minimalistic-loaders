@@ -28,7 +28,13 @@ class Loader extends Component {
           length={length}
         />
         {loaderText !== "" && (
-          <span className="loader-text" style={{ color: color }}>
+          <span
+            className="loader-text"
+            style={{
+              color: color,
+              marginTop: "2em"
+            }}
+          >
             {loaderText}
           </span>
         )}
