@@ -20,14 +20,18 @@ class Loader extends Component {
     const ShapeDiv = shapes[shape];
 
     return (
-      <LoaderStyles fontSize={fontSize} color={color}>
+      <LoaderStyles style={{ fontSize: fontSize, padding: fontSize }}>
         <ShapeDiv
           animation={animations[animation]}
           size={size}
           color={color}
           length={length}
         />
-        {loaderText !== "" && <span className="loader-text">{loaderText}</span>}
+        {loaderText !== "" && (
+          <span className="loader-text" style={{ color: color }}>
+            {loaderText}
+          </span>
+        )}
       </LoaderStyles>
     );
   }
@@ -53,15 +57,10 @@ Loader.propTypes = {
 };
 
 const LoaderStyles = s.div`
-  font-size: ${props => props.fontSize};
   display: flex;
   align-items: center;
   justify-items: center;
   flex-direction: column;
-  padding: ${props => props.fontSize};
-  .loader-text {
-    color: ${props => props.color};
-  }
 `;
 
 export default Loader;
