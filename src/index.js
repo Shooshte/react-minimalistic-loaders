@@ -50,7 +50,7 @@ Loader.defaultProps = {
   loaderText: "Loading...",
   length: "4s",
   animation: "NormalRotation",
-  shape: "Base"
+  shape: "Square"
 };
 
 Loader.propTypes = {

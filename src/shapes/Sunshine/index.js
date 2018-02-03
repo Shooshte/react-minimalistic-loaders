@@ -1,7 +1,7 @@
 import { extend } from "styled-components";
-import { Base } from "../Base/";
+import { Square } from "../Square/";
 
-export const Sunshine = Base.extend`
+export const Sunshine = Square.extend`
   ::before {
     content: "";
     position: absolute;

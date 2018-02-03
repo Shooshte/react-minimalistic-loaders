@@ -1,9 +1,9 @@
-import { Base } from "./Base/";
+import { Square } from "./Base/";
 import { NotchedCircle } from "./NotchedCircle/";
 import { Sunshine } from "./Sunshine/";
 
 export const shapes = {
-  Base,
+  Square,
   NotchedCircle,
   Sunshine
 };

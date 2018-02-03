@@ -1,7 +1,7 @@
 import { extend } from "styled-components";
-import { Base } from "../Base/";
+import { Square } from "../Square/";
 
-export const NotchedCircle = Base.extend`
+export const NotchedCircle = Square.extend`
   border-radius: 50%;
   border-right-color: transparent;
   :before {
