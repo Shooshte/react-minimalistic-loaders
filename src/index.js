@@ -49,7 +49,7 @@ Loader.defaultProps = {
   fontSize: "28px",
   loaderText: "Loading...",
   length: "4s",
-  animation: "NormalRotation",
+  animation: "HalfRotation",
   shape: "Square"
 };
 

@@ -11,7 +11,7 @@ class Demo extends Component {
     super(props);
 
     this.state = {
-      animation: "JumpyRotation",
+      animation: "HalfRotation",
       shape: "Square",
       size: "28px",
       color: "#000",
