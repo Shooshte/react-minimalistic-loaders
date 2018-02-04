@@ -12,7 +12,7 @@ class Loader extends Component {
       color,
       fontSize,
       loaderText,
-      length,
+      animationLength,
       animation,
       shape
     } = this.props;
@@ -25,7 +25,7 @@ class Loader extends Component {
           animation={animations[animation]}
           size={size}
           color={color}
-          length={length}
+          animationLength={animationLength}
         />
         {loaderText !== "" && (
           <span
@@ -54,20 +54,48 @@ Loader.defaultProps = {
 };
 
 Loader.propTypes = {
-  size: PropTypes.string, // Size in a valid CSS unit
-  fontSize: PropTypes.string, // Size in a valid CSS unit
-  loaderText: PropTypes.string, // Text displayed under the loader
-  length: PropTypes.string, // The length of animation in a valid CSS unit
-  color: function (props, propName, componentName) {
-    if (!isValidTextColor(props[propName])) {
-      return new Error(
-        `The prop ${propName} does not seem to be a valid CSS color.`
-      )
-    }
-  }, // A valid CSS color, changes both loader and text
+  size: checkPropUnit,
+  fontSize: checkPropUnit,
+  loaderText: PropTypes.string,
+  animationLength: checkPropAnimationLength,
+  color: checkPropColor,
   animation: PropTypes.oneOf(Object.keys(animations)),
   shape: PropTypes.oneOf(Object.keys(shapes))
 };
+
+function checkPropAnimationLength(props, propName, componentName) {
+  if (!isValidTimeUnit(props[propName])) {
+    return new Error(
+      `the prop ${propName} does not seem to a valid animation length (ms and s accepted).`
+    )
+  }
+}
+
+function isValidTimeUnit(stringToTest) {
+  const regEx = RegExp('^([0-9]+)(ms|s)$')
+  return regEx.test(stringToTest)
+}
+
+function checkPropUnit(props, propName, componentName) {
+  if (!isValidUnit(props[propName])) {
+    return new Error(
+      `the prop ${propName} does not seem to be a valid CSS measurement unit.`
+    )
+  }
+}
+
+function isValidUnit(stringToTest) {
+  const regEx = RegExp('^([+-]?([0-9]*[.])?[0-9]+)(em|ex|%|px|cm|mm|in|pt|pc|ch|rem|vh|vw|vmin|vmax)$')
+  return regEx.test(stringToTest)
+}
+
+function checkPropColor(props, propName, componentName) {
+  if (!isValidTextColor(props[propName])) {
+    return new Error(
+      `The prop ${propName} does not seem to be a valid CSS color.`
+    )
+  }
+}
 
 function isValidTextColor(stringToTest) {
   //Alter the following conditions according to your need.

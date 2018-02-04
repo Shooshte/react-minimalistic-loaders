@@ -18,7 +18,7 @@ class Demo extends Component {
       color: "#000",
       fontSize: "28px",
       loaderText: "Loading...",
-      length: "4s"
+      animationLength: "4s"
     };
   }
 
@@ -40,13 +40,13 @@ class Demo extends Component {
       color,
       fontSize,
       loaderText,
-      length
+      animationLength
     } = this.state;
 
     return (
       <DemoStyles>
         <Loader
-          animation={animation} shape={shape} size={size} color={color} fontSize={fontSize} loaderText={loaderText} length={length}
+          animation={animation} shape={shape} size={size} color={color} fontSize={fontSize} loaderText={loaderText} animationLength={animationLength}
         />
         <div className="controls-row">
           <div className="controls-container">
@@ -129,8 +129,8 @@ class Demo extends Component {
               <input
                 type="text"
                 className="text-input"
-                defaultValue={length}
-                name="length"
+                defaultValue={animationLength}
+                name="animationLength"
                 onChange={this.handleChange}
               />
             </div>
