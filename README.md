@@ -1,16 +1,12 @@
 # React-minimalistic-loaders
 
-[![npm package][npm-badge]][npm]
-
 ## A lightweight react loader component. I will try to add new animations and shapes consistently.
 
 ### Usage:
 
 #### installation:
 `npm i react-minimalistic-loaders` 
-
 or
-
 `yarn add react-minimalistic-loaders`
 
 #### use it in your component:
@@ -58,5 +54,3 @@ export default App;
 
 Please read [CONTRIBUTING.MD](CONTRIBUTING.md) before commiting. PRs that do not follow the existing code structure will be rejected.
 
-[npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
-[npm]: https://www.npmjs.com/package/react-minimalistic-loaders
