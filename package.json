@@ -18,7 +18,7 @@
   },
   "peerDependencies": {
     "react": "16.x",
-    "styled-components": "^3.x"
+    "styled-components": "3.x"
   },
   "devDependencies": {
     "babel-jest": "^22.1.0",
