@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
 import s from "styled-components";
+import debounce from 'lodash/debounce'
 
 import Loader from "../../src";
 
@@ -21,14 +22,14 @@ class Demo extends Component {
     };
   }
 
-  updateState = (key, value) => {
+  updateState = debounce((key, value) => {
     this.setState({
       [key]: value
     });
-  };
+  }, 500);
 
   handleChange = ({ target: { name, value } }) => {
-    this.setState({ [name]: value });
+    this.updateState(name, value)
   };
 
   render() {
@@ -88,7 +89,7 @@ class Demo extends Component {
               <input
                 type="text"
                 className="text-input"
-                value={size}
+                defaultValue={size}
                 name="size"
                 onChange={this.handleChange}
               />
@@ -98,7 +99,7 @@ class Demo extends Component {
               <input
                 type="text"
                 className="text-input"
-                value={color}
+                defaultValue={color}
                 name="color"
                 onChange={this.handleChange}
               />
@@ -108,7 +109,7 @@ class Demo extends Component {
               <input
                 type="text"
                 className="text-input"
-                value={fontSize}
+                defaultValue={fontSize}
                 name="fontSize"
                 onChange={this.handleChange}
               />
@@ -118,7 +119,7 @@ class Demo extends Component {
               <input
                 type="text"
                 className="text-input"
-                value={loaderText}
+                defaultValue={loaderText}
                 name="loaderText"
                 onChange={this.handleChange}
               />
@@ -128,7 +129,7 @@ class Demo extends Component {
               <input
                 type="text"
                 className="text-input"
-                value={length}
+                defaultValue={length}
                 name="length"
                 onChange={this.handleChange}
               />

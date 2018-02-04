@@ -4,7 +4,7 @@ import { Square } from "../Square/";
 export const NotchedCircle = Square.extend`
   border-radius: 50%;
   border-right-color: transparent;
-  :before {
+  ::before {
     content: "";
     display: block;
     border: calc(${props => props.size} * 0.1) solid ${props => props.color};

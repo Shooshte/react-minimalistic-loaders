@@ -55,12 +55,33 @@ Loader.defaultProps = {
 
 Loader.propTypes = {
   size: PropTypes.string, // Size in a valid CSS unit
-  color: PropTypes.string, // A valid CSS color, changes both loader and text
   fontSize: PropTypes.string, // Size in a valid CSS unit
   loaderText: PropTypes.string, // Text displayed under the loader
   length: PropTypes.string, // The length of animation in a valid CSS unit
-  animation: PropTypes.string // The name of the animation
+  color: function (props, propName, componentName) {
+    if (!isValidTextColor(props[propName])) {
+      return new Error(
+        `The prop ${propName} does not seem to be a valid CSS color.`
+      )
+    }
+  }, // A valid CSS color, changes both loader and text
+  animation: PropTypes.oneOf(Object.keys(animations)),
+  shape: PropTypes.oneOf(Object.keys(shapes))
 };
+
+function isValidTextColor(stringToTest) {
+  //Alter the following conditions according to your need.
+  if (stringToTest === "") { return false; }
+  if (stringToTest === "inherit") { return false; }
+  if (stringToTest === "transparent") { return false; }
+  var image = document.createElement("img");
+  image.style.color = "rgb(0, 0, 0)";
+  image.style.color = stringToTest;
+  if (image.style.color !== "rgb(0, 0, 0)") { return true; }
+  image.style.color = "rgb(255, 255, 255)";
+  image.style.color = stringToTest;
+  return image.style.color !== "rgb(255, 255, 255)";
+}
 
 const LoaderStyles = s.div`
   display: flex;
