@@ -5,22 +5,24 @@ export const Eyeball = Square.extend`
   border-radius: 50%;
   :before {
     content: "";
-    display: block;
+    position: absolute;
     border: calc(${props => props.size} * 0.1) solid ${props => props.color};
-    width: calc(${props => props.size} * 0.2);
-    height: calc(${props => props.size} * 0.2);
+    width: calc(${props => props.size} * 0.33);
+    height: calc(${props => props.size} * 0.33);
     border-radius: 50%;
-    margin: calc(${props => props.size} * 0.15);
+    margin: calc(${props => props.size} * -0.1);
     background-color: ${props => props.color};
+    transform: translate(calc(${props => props.size} * 0.446), calc(${props => props.size} * 0.446));
   }
   :after {
     content: "";
-    display: block;
-    width: calc(${props => props.size} * 0.1);
-    height: calc(${props => props.size} * 0.1);
+    position: absolute;
+    width: calc(${props => props.size} * 0.33 * 0.5);
+    height: calc(${props => props.size} * 0.33 * 0.5);
     border-radius: 50%;
-    margin: calc(${props => props.size} * 0.15);
-    transform: translate(calc(${props => props.size} * 0.13), calc(${props => props.size} * -0.44));
+    margin: calc(${props => props.size} * -0.1);
+    border: calc(${props => props.size} * 0.1) solid #fff;
     background-color: #fff;
+    transform: translate(calc(${props => props.size} * 0.5567), calc(${props => props.size} * 0.5567));
   }
 `;
