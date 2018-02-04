@@ -1,7 +1,9 @@
-import { JumpyRotation } from "./JumpyRotation/";
-import { NormalRotation } from "./NormalRotation/";
+import { Grow } from "./Grow/";
+import { Rotation } from "./Rotation/";
+import { HalfRotation } from './HalfRotation/'
 
 export const animations = {
-  JumpyRotation,
-  NormalRotation
+  Grow,
+  Rotation,
+  HalfRotation
 };
