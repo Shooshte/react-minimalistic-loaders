@@ -8,7 +8,9 @@
 
 #### installation:
 `npm i react-minimalistic-loaders` 
+
 or
+
 `yarn add react-minimalistic-loaders`
 
 #### use it in your component:
@@ -19,7 +21,7 @@ import Loader from "react-minimalistic-loaders";
 class App extends Component {
   render() {
     return (
-      <Loader shape="Sunshine" size="100px" />
+      <Loader shape="Eyeball" size="100px" />
     );
   }
 }
@@ -40,13 +42,17 @@ export default App;
 | `shape` | string | `Base` | The name of the loader shape. |
 
 ### Available animations:
-* `JumpyRotation`
-* `NormalRotation`
+* `Grow`
+* `HalfRotation`
+* `Rotation`
+* `AcceleratedRotation`
 
 ### Available shapes:
-* `Base`
-* `NothedCircle`
+* `Square`
+* `NotchedCircle`
 * `Sunshine`
+* `Eyeball`
+
 
 ### Contributing:
 

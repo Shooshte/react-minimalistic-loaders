@@ -1,6 +1,6 @@
 {
   "name": "react-minimalistic-loaders",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "description": "A react loader component done with CSS.",
   "main": "lib/index.js",
   "module": "es/index.js",
