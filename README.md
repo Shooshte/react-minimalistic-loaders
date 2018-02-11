@@ -48,7 +48,9 @@ export default App;
 * `NotchedCircle`
 * `Sunshine`
 * `Eyeball`
-
+* `Corridor`
+* `ThreeCircles`
+* `Spinner`
 
 ### Contributing:
 
