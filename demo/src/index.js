@@ -44,99 +44,101 @@ class Demo extends Component {
     } = this.state;
 
     return (
-      <DemoStyles>
+      <div>
+        <DemoStyles>
+          <div className="controls-row">
+            <div className="controls-container">
+              <h3>Animations:</h3>
+              {Object.keys(animations).map(key => {
+                return (
+                  <div
+                    onClick={() => {
+                      this.updateState("animation", key);
+                    }}
+                    key={key}
+                    className={`controls-button ${animation === key &&
+                      "selected"}`}
+                  >
+                    {key}
+                  </div>
+                );
+              })}
+            </div>
+            <div className="controls-container">
+              <h3>Shapes:</h3>
+              {Object.keys(shapes).map(key => {
+                return (
+                  <div
+                    onClick={() => {
+                      this.updateState("shape", key);
+                    }}
+                    key={key}
+                    className={`controls-button ${shape === key && "selected"}`}
+                  >
+                    {key}
+                  </div>
+                );
+              })}
+            </div>
+            <div className="controls-container">
+              <h3>Styles:</h3>
+              <div className="input-container">
+                <p className="input-label">Size:</p>
+                <input
+                  type="text"
+                  className="text-input"
+                  defaultValue={size}
+                  name="size"
+                  onChange={this.handleChange}
+                />
+              </div>
+              <div className="input-container">
+                <p className="input-label">Color:</p>
+                <input
+                  type="text"
+                  className="text-input"
+                  defaultValue={color}
+                  name="color"
+                  onChange={this.handleChange}
+                />
+              </div>
+              <div className="input-container">
+                <p className="input-label">Font Size:</p>
+                <input
+                  type="text"
+                  className="text-input"
+                  defaultValue={fontSize}
+                  name="fontSize"
+                  onChange={this.handleChange}
+                />
+              </div>
+              <div className="input-container">
+                <p className="input-label">Text:</p>
+                <input
+                  type="text"
+                  className="text-input"
+                  defaultValue={loaderText}
+                  name="loaderText"
+                  onChange={this.handleChange}
+                />
+              </div>
+              <div className="input-container">
+                <p className="input-label">Animation Length:</p>
+                <input
+                  type="text"
+                  className="text-input"
+                  defaultValue={animationLength}
+                  name="animationLength"
+                  onChange={this.handleChange}
+                />
+              </div>
+            </div>
+          </div>
+        </DemoStyles>
         <Loader
           animation={animation} shape={shape} size={size} color={color} fontSize={fontSize} loaderText={loaderText} animationLength={animationLength}
         />
-        <div className="controls-row">
-          <div className="controls-container">
-            <h3>Animations:</h3>
-            {Object.keys(animations).map(key => {
-              return (
-                <div
-                  onClick={() => {
-                    this.updateState("animation", key);
-                  }}
-                  key={key}
-                  className={`controls-button ${animation === key &&
-                    "selected"}`}
-                >
-                  {key}
-                </div>
-              );
-            })}
-          </div>
-          <div className="controls-container">
-            <h3>Shapes:</h3>
-            {Object.keys(shapes).map(key => {
-              return (
-                <div
-                  onClick={() => {
-                    this.updateState("shape", key);
-                  }}
-                  key={key}
-                  className={`controls-button ${shape === key && "selected"}`}
-                >
-                  {key}
-                </div>
-              );
-            })}
-          </div>
-          <div className="controls-container">
-            <h3>Styles:</h3>
-            <div className="input-container">
-              <p className="input-label">Size:</p>
-              <input
-                type="text"
-                className="text-input"
-                defaultValue={size}
-                name="size"
-                onChange={this.handleChange}
-              />
-            </div>
-            <div className="input-container">
-              <p className="input-label">Color:</p>
-              <input
-                type="text"
-                className="text-input"
-                defaultValue={color}
-                name="color"
-                onChange={this.handleChange}
-              />
-            </div>
-            <div className="input-container">
-              <p className="input-label">Font Size:</p>
-              <input
-                type="text"
-                className="text-input"
-                defaultValue={fontSize}
-                name="fontSize"
-                onChange={this.handleChange}
-              />
-            </div>
-            <div className="input-container">
-              <p className="input-label">Text:</p>
-              <input
-                type="text"
-                className="text-input"
-                defaultValue={loaderText}
-                name="loaderText"
-                onChange={this.handleChange}
-              />
-            </div>
-            <div className="input-container">
-              <p className="input-label">Animation Length:</p>
-              <input
-                type="text"
-                className="text-input"
-                defaultValue={animationLength}
-                name="animationLength"
-                onChange={this.handleChange}
-              />
-            </div>
-          </div>
-        </div>
-      </DemoStyles>
+      </div>
     );
   }
 }
@@ -146,7 +148,6 @@ const DemoStyles = s.div`
   align-items: center;
   justify-items: center;
   width: 100%;
-  height: 100vh;
   flex-direction: column;
   .controls-row {
     display: flex;

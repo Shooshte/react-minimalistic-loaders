@@ -48,7 +48,7 @@ Loader.defaultProps = {
   color: "#000",
   fontSize: "28px",
   loaderText: "Loading...",
-  length: "4s",
+  animationLength: "4s",
   animation: "HalfRotation",
   shape: "Square"
 };
