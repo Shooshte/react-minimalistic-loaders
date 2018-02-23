@@ -21,12 +21,12 @@ class Loader extends Component {
 
     return (
       <LoaderStyles style={{ fontSize: fontSize, padding: fontSize }}>
-        <ShapeDiv
-          animation={animations[animation]}
-          size={size}
-          color={color}
-          animationLength={animationLength}
-        />
+        <AnimationStyles animation={animations[animation]} animationLength={animationLength}>
+          <ShapeDiv
+            size={size}
+            color={color}
+          />
+        </AnimationStyles>
         {loaderText !== "" && (
           <span
             className="loader-text"
@@ -112,10 +112,17 @@ function isValidTextColor(stringToTest) {
 }
 
 const LoaderStyles = s.div`
+  animation: ${props => props.animation} ${props =>
+    props.animationLength} linear infinite;
   display: flex;
   align-items: center;
   justify-items: center;
   flex-direction: column;
 `;
+
+const AnimationStyles = s.div`
+animation: ${props => props.animation} ${props =>
+    props.animationLength} linear infinite;
+`
 
 export default Loader;

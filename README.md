@@ -51,6 +51,7 @@ export default App;
 * `Corridor`
 * `ThreeCircles`
 * `Spinner`
+* `InvertedTam`
 
 ### Contributing:
 

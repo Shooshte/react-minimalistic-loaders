@@ -6,6 +6,7 @@ import { Sunshine } from "./Sunshine/";
 import { Corridor } from './Corridor'
 import { ThreeCircles } from './ThreeCircles'
 import { Spinner } from './Spinner'
+import { InvertedTam } from './InvertedTam'
 
 export const shapes = {
   Square,
@@ -14,5 +15,6 @@ export const shapes = {
   Eyeball,
   Corridor,
   ThreeCircles,
-  Spinner
+  Spinner,
+  InvertedTam
 };
